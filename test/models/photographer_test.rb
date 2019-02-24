@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class PhotographerTest < ActiveSupport::TestCase
-  test "reporter fields must not be empty" do
+  test "photographer fields must not be empty" do
     Photographer = Photographer.new
     assert Photographer.invalid?
     assert Photographer.errors[:name].any?
