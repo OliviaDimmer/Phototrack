@@ -10,18 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_25_025339) do
-
-  create_table "associations", force: :cascade do |t|
-    t.integer "reporter_id"
-    t.integer "photographer_id"
-    t.integer "shoot_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["photographer_id"], name: "index_associations_on_photographer_id"
-    t.index ["reporter_id"], name: "index_associations_on_reporter_id"
-    t.index ["shoot_id"], name: "index_associations_on_shoot_id"
-  end
+ActiveRecord::Schema.define(version: 2019_02_27_234759) do
 
   create_table "photographers", force: :cascade do |t|
     t.string "name"
@@ -31,12 +20,30 @@ ActiveRecord::Schema.define(version: 2019_02_25_025339) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "photographers_shoots", id: false, force: :cascade do |t|
+    t.integer "shoot_id", null: false
+    t.integer "photographer_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["photographer_id"], name: "index_photographers_shoots_on_photographer_id"
+    t.index ["shoot_id"], name: "index_photographers_shoots_on_shoot_id"
+  end
+
   create_table "reporters", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "reporters_shoots", id: false, force: :cascade do |t|
+    t.integer "shoot_id", null: false
+    t.integer "reporter_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["reporter_id"], name: "index_reporters_shoots_on_reporter_id"
+    t.index ["shoot_id"], name: "index_reporters_shoots_on_shoot_id"
   end
 
   create_table "shoots", force: :cascade do |t|
