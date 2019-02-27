@@ -14,18 +14,17 @@ Reporter.create!(name: 'Bob Woodward',
  email: 'bwoodward@press.com',
  phone_number: '810-448-7321')
 
- Reporter.create!(name: 'Carl Bernstein',
+Reporter.create!(name: 'Carl Bernstein',
   email: 'cbernstein@press.com',
   phone_number: '810-448-7344')
 
-  Photographer.create!(name: 'Lindsay Shutter',
+Photographer.create!(name: 'Lindsay Shutter',
    email: 'lshutter@press.com',
    phone_number: '810-448-4444')
 
-   Photographer.create!(name: 'Mark Canon',
+Photographer.create!(name: 'Mark Canon',
     email: 'mcanon@press.com',
     phone_number: '810-448-7777')
-
 
 Shoot.create!(slug: 'Political Rally',
   assignment_description: '%{<p>

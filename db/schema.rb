@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_24_004637) do
+ActiveRecord::Schema.define(version: 2019_02_25_025339) do
+
+  create_table "associations", force: :cascade do |t|
+    t.integer "reporter_id"
+    t.integer "photographer_id"
+    t.integer "shoot_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["photographer_id"], name: "index_associations_on_photographer_id"
+    t.index ["reporter_id"], name: "index_associations_on_reporter_id"
+    t.index ["shoot_id"], name: "index_associations_on_shoot_id"
+  end
 
   create_table "photographers", force: :cascade do |t|
     t.string "name"
