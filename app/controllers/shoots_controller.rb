@@ -69,6 +69,6 @@ class ShootsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shoot_params
-      params.fetch(:shoot, {})
+      params.fetch(:shoot, {:slug, :assignment_description, :start, :end, :location, :contact_name, :contact_phone_number, :deadline})
     end
 end
