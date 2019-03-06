@@ -1,0 +1,14 @@
+%header
+%h1 Latest Shoots
+%p= link_to 'New Shoot', new_shoot_path
+
+%ul Shoots
+  - shoots.each do |shoot|
+  %li
+    %article
+      %h3= link_to shoot.slug, shoot
+      = shoot.slug
+      %p.deadline= shoot.reporter.name
+      %ul= controls
+      %li= link_to 'Edit' edit_shoot_path(shoot)
+      %li= link_to 'Destroy', shoot, method :delete,
