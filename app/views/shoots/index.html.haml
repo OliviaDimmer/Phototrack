@@ -11,4 +11,7 @@
       %p.deadline= shoot.reporter.name
       %ul= controls
       %li= link_to 'Edit' edit_shoot_path(shoot)
-      %li= link_to 'Destroy', shoot, method :delete,
+      %li= link_to 'Destroy', shoot, method :delete, data: {are you sure?}
+
+%footer
+=link_to 'Back', shoots_path
