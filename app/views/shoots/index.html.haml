@@ -11,7 +11,7 @@
           %h3= link_to shoot.slug, shoot
           = shoot.slug
           %p.assignment_description= link_to shoot.assignment_description, shoot
-            = sanitize(shoot.assignment_description)
+          = sanitize(shoot.assignment_description)
           %p.deadline= link_to shoot.deadline, shoot
           = shoot.deadline
   %ul#controls
