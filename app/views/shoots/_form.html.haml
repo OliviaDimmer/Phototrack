@@ -1,0 +1,11 @@
+= form_for @shoot do |f|
+  - if shoot.errors.any?
+    #error_explanation
+      %h2  "#{pluralize(shoot.errors.count, "error")}"
+        prohibited this shoot from being saved:
+      %ul
+        - shoot.errors.full_messages.each do |message|
+          %li= message
+
+  .actions
+    = f.submit 'Save'

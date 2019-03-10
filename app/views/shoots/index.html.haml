@@ -8,7 +8,7 @@
     %article
       %h3= link_to shoot.slug, shoot
       = shoot.slug
-      %p.deadline= shoot.reporter.name
+      %p.deadline= shoot.deadline
       %ul= controls
       %li= link_to 'Edit' edit_shoot_path(shoot)
       %li= link_to 'Destroy', shoot, method :delete, data: {are you sure?}
