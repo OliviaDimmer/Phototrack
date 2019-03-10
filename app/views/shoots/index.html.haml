@@ -1,16 +1,22 @@
-%header
-%h1 Latest Shoots
-%p= link_to 'New Shoot', new_shoot_path
+- if @shoots.blank?
+  %p There are not any shoots currently in the system.
+- else
+  %h1 Latest Shoots
 
-%ul Shoots
-  - shoots.each do |shoot|
+  %p= link_to 'New Shoot', new_shoot_path
+
+  %ul#shoots
+    - @shoots.each do |shoot|
   %li
     %article
       %h3= link_to shoot.slug, shoot
       = shoot.slug
-      %p.deadline= shoot.deadline
-      %ul= controls
-      %li= link_to 'Edit' edit_shoot_path(shoot)
+      %p
+        = sanitize(shoot.assignment_description)
+      %p.deadline= link_to shoot.deadline, shoot
+      = shoot.deadline
+        %ul#controls
+      %li= link_to 'Edit', edit_shoot_path
       %li= link_to 'Destroy', shoot, method :delete, data: {are you sure?}
 
 %footer
