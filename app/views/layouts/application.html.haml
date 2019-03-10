@@ -1,19 +1,18 @@
 !!!
 %html {lang: "en"}
-  %head
-    %meta{charset: "UTF-8"}
-    %title Phototrack
-    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0, shrink-to-fit=no"}
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
-  %header#header
-  %h1 Phototrack
+%head
+%meta{charset: "UTF-8"}
+%title Phototrack
+%meta{name: "viewport", content: "width=device-width, initial-scale=1.0, shrink-to-fit=no"}
+= csrf_meta_tags
+= csp_meta_tag
+= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+%body
+%header#header
+%h1 Phototrack
 
-    = yield
-
+= yield
 
 %footer#footer
-  %small Site design by Olivia Dimmer.
+%small Site design by Olivia Dimmer.
