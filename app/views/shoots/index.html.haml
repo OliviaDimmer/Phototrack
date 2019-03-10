@@ -1,7 +1,7 @@
 - if @shoots.blank?
   %p There are not any shoots currently in the system.
 - else
-  %h1 Latest Shoots
+  %h2 Latest Shoots
 
 %p= link_to 'New Shoot', new_shoot_path
 %ul#shoots
@@ -16,5 +16,5 @@
         = shoot.deadline
         %ul#controls
         -# %li= link_to 'Edit', edit_shoot_path
-        -# %li= link_to 'Destroy', shoot, method :delete, data: { confirm: 'are you sure?' }
+        %li= link_to 'Destroy', shoot, method: :delete, data: { confirm: 'are you sure?' }
 %footer= link_to 'Back', shoots_path
