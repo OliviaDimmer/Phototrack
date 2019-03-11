@@ -1,21 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  slug: MyString
-  assignment_description: MyText
+  slug: My_Slug
+  assignment_description: A_quick_description
   start: 2019-02-23 18:45:27
   end: 2019-02-23 18:45:27
   location: MyString
   contact_name: MyString
-  contact_phone_number: MyString
+  contact_phone_number: 888-654-9345
   deadline: 2019-02-23 18:45:27
 
 two:
-  slug: MyString
+  slug: MyString2
   assignment_description: MyText
   start: 2019-02-23 18:45:27
   end: 2019-02-23 18:45:27
   location: MyString
   contact_name: MyString
-  contact_phone_number: MyString
+  contact_phone_number: 888-654-9344
   deadline: 2019-02-23 18:45:27
