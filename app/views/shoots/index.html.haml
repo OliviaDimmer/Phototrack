@@ -12,6 +12,5 @@
         %p.assignment_description= link_to shoot.assignment_description, shoot
         %p.deadline= link_to shoot.deadline, shoot
         %ul.controls
-        %li= link_to 'Edit', edit_shoot_path(@shoot)
-        %li= link_to 'Destroy', @shoot, method: :delete, data: { confirm: 'are you sure?' }
-%footer= link_to 'Back', shoots_path
+        %li= link_to 'Edit', edit_shoot_path(shoot)
+        %li= link_to 'Destroy', shoot, method: :delete, data: { confirm: 'are you sure?' }
