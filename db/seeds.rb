@@ -27,9 +27,7 @@ Photographer.create!(name: 'Mark Canon',
     phone_number: '810-448-7777')
 
 Shoot.create!(slug: 'Political Rally',
-  assignment_description: '%{<p>
-    The news desk needs a gallery of photos from a political rally.
-    </p>}',
+  assignment_description: 'The news desk needs a gallery of photos from a political rally.',
 start: 'DateTime.new(2018,9,1,7)',
 end: 'DateTime.new(2018,9,1,12)',
 location: 'Navy Pier',
@@ -38,9 +36,7 @@ contact_phone_number: '555-123-4324' ,
 deadline: 'DateTime.new(2018,9,3,12)')
 
 Shoot.create!(slug: 'Dog Feature',
-  assignment_description: '%{<p>
-    The features desk needs a picture of a dog in an animal shelter.
-    </p>}',
+  assignment_description: 'The features desk needs a picture of a dog in an animal shelter.',
 start: 'DateTime.new(2018,6,1,7)',
 end: 'DateTime.new(2018,6,1,12)',
 location: 'Anywhere',
@@ -49,9 +45,7 @@ contact_phone_number: '555-555-4524' ,
 deadline: 'DateTime.new(2018,6,3,12)')
 
 Shoot.create!(slug: 'Cubs game',
-  assignment_description: '%{<p>
-    The sports desk needs some photos of the Cubs game.
-    </p>}',
+  assignment_description: 'The sports desk needs some photos of the Cubs game.',
 start: 'DateTime.new(2018,7,1,7)',
 end: 'DateTime.new(2018,7,1,10)',
 location: 'Cubs field',
