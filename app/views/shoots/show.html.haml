@@ -1,5 +1,4 @@
 %p#notice= notice
-= link_to 'Edit', edit_shoot_path(@shoot)
 %ul
   %li= @shoot.slug
   %li= @shoot.assignment_description
@@ -9,6 +8,10 @@
   %li= @shoot.contact_name
   %li= @shoot.contact_phone_number
   %li= @shoot.deadline
+
+  %ul.controls
+  %li= link_to 'Edit', edit_shoot_path(@shoot)
+  %li= link_to 'Destroy', @shoot, method: :delete, data: { confirm: 'are you sure?' }
 
 
 = link_to 'Back', shoots_path
