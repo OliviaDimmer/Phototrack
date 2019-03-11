@@ -17,7 +17,7 @@ class ShootsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create shoot" do
     assert_difference('Shoot.count') do
-       post shoots_url, params: { shoot: { slug: 'TestAssignment', assignment_description: 'A description here', start: '01-02-19 7', end: '01-02-19 13', location: 'The courthouse', contact_name: 'Bob Jones', contact_phone_number: '810-999-7543', deadline: '01-02-19 15'  } }
+       post shoots_url, params: { shoot: { slug: "#{@shoot.slug} 2", assignment_description: @shoot.assignment_description, start: @shoot.start, end: @shoot.end, location: @shoot.location, contact_name: @shoot.contact_name, contact_phone_number: @shoot.contact_phone_number, deadline: @shoot.deadline } }
     end
 
     assert_redirected_to shoot_url(Shoot.last)
@@ -34,7 +34,7 @@ class ShootsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update shoot" do
-    patch shoot_url(@shoot), params: { shoot: { slug: 'TestUpdateAssignment', assignment_description: 'A description here', start: '01-02-19 7', end: '01-02-19 13', location: 'The courthouse', contact_name: 'Bob Jones', contact_phone_number: '810-999-7543', deadline: '01-02-19 15' } }
+    patch shoot_url(@shoot), params: { shoot: {slug: @shoot.slug, assignment_description: @shoot.assignment_description, start: @shoot.start, end: @shoot.end, location: @shoot.location, contact_name: @shoot.contact_name, contact_phone_number: @shoot.contact_phone_number, deadline: @shoot.deadline } }
     assert_redirected_to shoot_url(@shoot)
   end
 
