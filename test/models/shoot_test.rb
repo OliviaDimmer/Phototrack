@@ -13,4 +13,17 @@ class ShootTest < ActiveSupport::TestCase
      assert Shoot.errors[:contact_phone_number].any?
      assert Shoot.errors[:deadline].any?
   end
+
+test "post responds to reporter_name getter" do
+  @shoot = shoots(:good_shoot)
+  assert_equal @shoot.reporter.name, shoots(:good_shoot).author.name
+end
+
+test "post responds to reporter_name setter" do
+  @shoot = shoots(:good_shoot)
+  @shoot.reporter_name = reporters(:Carl_Bernstein)name
+  @shoot.save
+  assert_equal @shoot.reporter.name, shoots(:good_shoot).author.name
+end
+
 end
