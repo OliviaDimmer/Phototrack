@@ -53,6 +53,11 @@ article p {
 
 }
 
+article {
+
+  margin: 2em;
+}
+
 .new {
 margin-bottom: 5em;
 
@@ -87,17 +92,7 @@ input[type="submit"]:hover {
 
 }
 
-.shoots {
-  margin: 2em;
-
-}
-
-.shoots li {
-
-
-}
-
-ul {
+.inputs li {
   margin: 2em;
 }
 
@@ -106,8 +101,9 @@ background-color: grey;
 padding: 2em;
 }
 
-.back {
+.back  {
 margin: 3em 2em 1em 2em;
+text-decoration:underline;
 
 }
 
