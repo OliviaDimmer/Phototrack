@@ -1,7 +1,8 @@
 %p#notice= notice
 %article
   %ul
-    %li= @shoot.slug
+    %li
+    %h3= @shoot.slug
     %li= @shoot.assignment_description
     %li= @shoot.start
     %li= @shoot.end
@@ -15,4 +16,4 @@
     %li= link_to 'Destroy', @shoot, method: :delete, data: { confirm: 'are you sure?' }
 %article
 
-= link_to 'Back', shoots_path
+%p.back= link_to 'Back', shoots_path

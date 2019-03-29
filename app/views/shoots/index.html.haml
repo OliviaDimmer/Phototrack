@@ -3,8 +3,8 @@
 - else
   %h2 Latest Shoots
 
-%p= link_to 'New Shoot', new_shoot_path
-%ul#shoots
+%p.new= link_to 'New Shoot', new_shoot_path
+%ul.shoots
   - @shoots.each do |shoot|
     %li
       %article
