@@ -4,7 +4,7 @@ class Shoot < ApplicationRecord
   has_and_belongs_to_many :reporters
   has_and_belongs_to_many :photographers
 
-  def reporter_names=(names)
+  def reporter_name=(names)
       # reset self tags to an empty set; build all on each create/update
       self.reporter_name = []
       # split the tag names at commas into an array
@@ -15,8 +15,8 @@ class Shoot < ApplicationRecord
         self.reporter_name << reporter_name
       end
     end
-  
-    def reporter_names
+
+    def reporter_name
       if self.reporter_name.any?
         # use Array#map to build a collection of just the tag name values
         tags = self.reporter_name.map{|x| x.name }
