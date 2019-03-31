@@ -1,17 +1,19 @@
 %p#notice= notice
-%ul
-  %li= @shoot.slug
-  %li= @shoot.assignment_description
-  %li= @shoot.start
-  %li= @shoot.end
-  %li= @shoot.location
-  %li= @shoot.contact_name
-  %li= @shoot.contact_phone_number
-  %li= @shoot.deadline
+%article
+  %ul
+    %li
+    %h3= @shoot.slug
+    %li= @shoot.assignment_description
+    %li= @shoot.start
+    %li= @shoot.end
+    %li= @shoot.location
+    %li= @shoot.contact_name
+    %li= @shoot.contact_phone_number
+    %li= @shoot.deadline
 
-  %ul.controls
-  %li= link_to 'Edit', edit_shoot_path(@shoot)
-  %li= link_to 'Destroy', @shoot, method: :delete, data: { confirm: 'are you sure?' }
+    %ul.controls
+    %li= link_to 'Edit', edit_shoot_path(@shoot)
+    %li= link_to 'Destroy', @shoot, method: :delete, data: { confirm: 'are you sure?' }
+%article
 
-
-= link_to 'Back', shoots_path
+%p.back= link_to 'Back', shoots_path
