@@ -83,7 +83,17 @@ a {
 }
 .controls li {
   display: flex;
-  background-color: grey;
+  margin: 2em 2em 2em 0;
+  padding: .5em;
+}
+
+.edit {
+
+  background-color: #5BA0A3;
+}
+
+.destroy {
+  background-color: #F69999;
 }
 
 p a:hover,
@@ -94,6 +104,11 @@ input[type="submit"]:hover {
 
 .inputs li {
   margin: 2em;
+}
+
+#assignment_description{
+  display: block;
+  margin-top: 1em;
 }
 
 footer{
@@ -113,24 +128,26 @@ small {
 
 }
 
+input {
+display: block;
+margin-top: 1em;
+}
+
 /* Layout Styles (Usually Landmark ID Selectors) */
-// #show {
-//   padding-top: px-to-em(15px);
-// }
-// #notice {
-//   color: #66AB8C;
-// }
-//
-// #error_explanation {
-//   background-color: rgba(255,255,255,0.72);
-//   border-radius: 0.345em;
-//   padding: 0.345em 0.5em;
-//   color: red;
-// }
-// #error_explanation li {
-//   list-style: square;
-//   list-style-position: inside;
-// }
+ #show {
+  padding-top: px-to-em(15px);
+ }
+
+ #notice {
+  color: #66AB8C;
+  margin: 2em;
+ }
+
+ #error_explanation {
+   background-color: #F69999;
+   padding:  1em 2em 2em 2em;
+ }
+
 
 /* Modular Styles (Repeating Class Selectors) */
 
