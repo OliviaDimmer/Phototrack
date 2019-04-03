@@ -29,9 +29,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 ## Use the Github OmniAuth strategy to authenticate users
-# gem 'omniauth-github', github: 'NEED TO FIND LINK'
-
-
+# Use OmniAuth GitHub strategy for OAuth
+gem 'omniauth-github', github: 'intridea/omniauth-github'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
