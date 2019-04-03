@@ -1,2 +1,12 @@
 <h1>Let's create a new reporter</h1>
-<p>Find me in app/views/sessions/create.html.erb</p>
+%h2 Reporter Info
+%ul
+  %li
+    %b Name
+    = @reporter.name
+  %li
+    %b Email
+    = @reporter.email
+  %li
+    %b Username
+    = @reporter.nickname
