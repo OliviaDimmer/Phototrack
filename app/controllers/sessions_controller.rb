@@ -3,10 +3,14 @@ class SessionsController < ApplicationController
   def create
     # @provider_hash = request.env['omniauth.auth'].to_json
     omni = request.env['omniauth.auth']
-    @reporter = Reporter.find_or_create_by(uid: omni['uid']) do |author|
+    @reporter = Reporter.find_or_create_by(uid: omni['uid']) do |reporter|
       reporter.name = omni['info']['name']
       reporter.nickname = omni['info']['nickname']
       reporter.email = omni['info']['email']
     end
+  end
+  def login
+  end
+  def logout
   end
 end
