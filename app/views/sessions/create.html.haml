@@ -1,4 +1,7 @@
 %h1 Let's create a new reporter
+
+%p.greeting= "Hello, #{current_user.name}!"
+
 %h2 Reporter Info
 %ul
   %li
@@ -10,3 +13,6 @@
   %li
     %b Username
     = @reporter.nickname
+
+
+%footer= link_to 'Log out', logout_url    

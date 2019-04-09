@@ -1,5 +1,6 @@
 class ShootsController < ApplicationController
   before_action :set_shoot, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user
 
   # GET /shoots
   # GET /shoots.json
@@ -25,7 +26,8 @@ class ShootsController < ApplicationController
   # POST /shoots.json
   def create
     @shoot = Shoot.new(shoot_params)
-
+    @post.author = current_user
+    
     respond_to do |format|
       if @shoot.save
         format.html { redirect_to @shoot, notice: 'Shoot was successfully created.' }
@@ -69,6 +71,6 @@ class ShootsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shoot_params
-      params.require(:shoot).permit(:slug, :assignment_description, :start, :end, :location, :contact_name, :contact_phone_number, :deadline, :reporter_name)
+      params.require(:shoot).permit(:slug, :assignment_description, :start, :end, :location, :contact_name, :contact_phone_number, :deadline)
     end
 end

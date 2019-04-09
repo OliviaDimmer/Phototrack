@@ -5,12 +5,14 @@ class SessionsController < ApplicationController
     omni = request.env['omniauth.auth']
     @reporter = Reporter.find_or_create_by(uid: omni['uid']) do |reporter|
       reporter.name = omni['info']['name']
-      reporter.nickname = omni['info']['nickname']
       reporter.email = omni['info']['email']
     end
+    self.current_user = @reporter
   end
   def login
   end
   def logout
+    reset_session
+    redirect_to login_url, notice: "You've been logged out"
   end
 end

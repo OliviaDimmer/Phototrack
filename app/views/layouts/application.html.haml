@@ -11,8 +11,11 @@
     %body
       %header#header
         %h1 Phototrack
+        -if current_user
+          %p.greeting= "Welcome, #{current_user.name}"
 
       = yield
 
     %footer#footer
+      %p= link_to "Log out", logout_url
       %small Site design by Olivia Dimmer.
