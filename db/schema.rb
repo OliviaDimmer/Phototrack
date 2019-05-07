@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_10_222001) do
+ActiveRecord::Schema.define(version: 2019_05_07_001942) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -31,23 +31,6 @@ ActiveRecord::Schema.define(version: 2019_04_10_222001) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
-  end
-
-  create_table "photographers", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "phone_number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "photographers_shoots", id: false, force: :cascade do |t|
-    t.integer "shoot_id", null: false
-    t.integer "photographer_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["photographer_id"], name: "index_photographers_shoots_on_photographer_id"
-    t.index ["shoot_id"], name: "index_photographers_shoots_on_shoot_id"
   end
 
   create_table "reporters", force: :cascade do |t|

@@ -2,7 +2,6 @@ class Shoot < ApplicationRecord
   validates :slug, :assignment_description, :start, :end, :location, :contact_name, :contact_phone_number, :deadline, presence: true
   validates :slug, uniqueness: true
   has_and_belongs_to_many :reporters
-  has_and_belongs_to_many :photographers
 
   # def reporter_names=(names)
   #     # reset self tags to an empty set; build all on each create/update
