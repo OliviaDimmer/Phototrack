@@ -2,10 +2,10 @@
   - if shoot.errors.any?
     #error_explanation
       %h3
-        = pluralize(shoot.errors.count, "error")
+        = pluralize(@shoot.errors.count, "error")
         prohibited this shoot from being saved:
       %ul.errors
-        - shoot.errors.full_messages.each do |message|
+        - @shoot.errors.full_messages.each do |message|
           %li= message
   %ul.inputs
     %li

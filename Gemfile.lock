@@ -5,7 +5,8 @@ GIT
     omniauth-github (1.3.0)
       omniauth (~> 1.5)
       omniauth-oauth2 (>= 1.4.0, < 2.0)
-      pg (1.1.4)
+      pg (= 1.1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -135,6 +136,7 @@ GEM
     omniauth-oauth2 (1.6.0)
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
+    pg (1.1.4)
     public_suffix (3.0.3)
     puma (3.12.1)
     rack (2.0.6)

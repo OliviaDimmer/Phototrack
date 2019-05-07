@@ -36,6 +36,7 @@ h1 {
 
 header {
   background-color: #5BA0A3;
+  padding: 1em 0 1em 0;
 }
 
 h2 {
@@ -56,6 +57,11 @@ article p {
 article {
 
   margin: 2em;
+}
+
+.greeting {
+  color:white;
+  margin:0 0 0 2em;
 }
 
 .new {
@@ -115,7 +121,10 @@ footer{
 background-color: #5BA0A3;
 padding: 2em;
 }
+footer p a {
 
+  color:white;
+}
 .back  {
 margin: 3em 2em 1em 2em;
 text-decoration:underline;
