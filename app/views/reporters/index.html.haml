@@ -1,0 +1,16 @@
+- if @reporters.blank?
+  %p There are not any users currently in the system.
+- else
+  %h2 Users
+
+%p.new= link_to 'Add User', new_reporter_path
+%ul.shoots
+  - @reporters.each do |reporter|
+    %li
+      %article
+        %h3= link_to reporter.name, reporter
+        %p.email= link_to reporter.email, reporter
+        %p.phone_number= link_to reporter.phone_number, reporter
+        %ul.controls
+          %li.edit= link_to 'Edit', edit_reporter_path(reporter)
+          %li.destroy= link_to 'Destroy', reporter, method: :delete, data: { confirm: 'are you sure?' }

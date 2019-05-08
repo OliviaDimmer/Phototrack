@@ -1,0 +1,14 @@
+%p#notice= notice
+%article
+  %ul
+    %li
+    %h3= @reporter.name
+    %li= @reporter.email
+    %li= @reporter.phone_number
+
+    %ul.controls
+    %li= link_to 'Edit', edit_reporter_path(@reporter)
+    %li= link_to 'Destroy', @reporter, method: :delete, data: { confirm: 'are you sure?' }
+
+
+%p.back= link_to 'Back', reporters_path
