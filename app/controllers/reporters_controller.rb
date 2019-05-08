@@ -1,11 +1,10 @@
-class ReporterController < ApplicationController
+class ReportersController < ApplicationController
   before_action :set_reporter, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user
 
   # GET /reporters
   # GET /reporters.json
   def index
-    @reporter = Reporter.all
+    @reporters = Reporter.all
   end
 
   # GET /reporters/1
@@ -26,7 +25,6 @@ class ReporterController < ApplicationController
   # POST /reporters.json
   def create
     @reporter = Reporter.new(reporter_params)
-    @reporter.reporter = current_user
 
     respond_to do |format|
       if @reporter.save
@@ -40,7 +38,7 @@ class ReporterController < ApplicationController
   end
 
   # PATCH/PUT /reporters/1
-  # PATCH/PUT /reporter/1.json
+  # PATCH/PUT /reporters/1.json
   def update
     respond_to do |format|
       if @reporter.update(reporter_params)
@@ -58,7 +56,7 @@ class ReporterController < ApplicationController
   def destroy
     @reporter.destroy
     respond_to do |format|
-      format.html { redirect_to reporters_url, notice: 'Reporter was successfully deleted.' }
+      format.html { redirect_to reporters_url, notice: 'Reporter was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -73,6 +71,4 @@ class ReporterController < ApplicationController
     def reporter_params
       params.require(:reporter).permit(:name, :email, :phone_number)
     end
-end
-
 end
