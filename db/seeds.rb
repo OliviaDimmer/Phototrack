@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Photographer.destroy_all
 Reporter.destroy_all
 Shoot.destroy_all
 
@@ -17,14 +16,6 @@ Reporter.create!(name: 'Bob Woodward',
 Reporter.create!(name: 'Carl Bernstein',
   email: 'cbernstein@press.com',
   phone_number: '810-448-7344')
-
-Photographer.create!(name: 'Lindsay Shutter',
-   email: 'lshutter@press.com',
-   phone_number: '810-448-4444')
-
-Photographer.create!(name: 'Mark Canon',
-    email: 'mcanon@press.com',
-    phone_number: '810-448-7777')
 
 Shoot.create!(slug: 'Political Rally',
   assignment_description: 'The news desk needs a gallery of photos from a political rally.',
